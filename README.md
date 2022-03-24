@@ -9,4 +9,4 @@ const options = {
 fetch('https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=apple', options)
 	.then(response => response.json())
 	.then(response => console.log(response))
-	.ca
+	.catch(err => console.error(err));
