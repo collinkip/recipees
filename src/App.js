@@ -7,7 +7,7 @@ import Product from './products';
 const App=()=>{
   const [recipes,setRecipes]=useState([]);
   const [search,setSearch]=useState("");
-  const [query,setQuery]=useState('');
+  const [query,setQuery]=useState();
   useEffect(()=>{
     fetchRecipe();
   },[query]);
