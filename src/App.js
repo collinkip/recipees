@@ -11,7 +11,7 @@ const App=()=>{
     fetchRecipe();
   },[]);
   const fetchRecipe= async()=>{
-    const response =await fetch(`https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=pork`, {
+    const response =await fetch(`https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=chicken`, {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "edamam-food-and-grocery-database.p.rapidapi.com",
