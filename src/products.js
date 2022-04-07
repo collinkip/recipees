@@ -4,7 +4,8 @@ const Product=({title,image,category})=>{
 
     return(
         
-        <div><h2>{title}</h2>
+        <div className='products'>
+            <h2>{title}</h2>
         <p>
             {category}
         </p>

@@ -5,7 +5,7 @@ import React from 'react';
 const Navbar=()=>{
     return(
         <div>
-            <ul style={{backgroundColor:'brown',listStyle:'none',textAlign:'center',display:'flex',flexDirection:'row',justifyContent:'space-around'}}>
+            <ul className='navlinks'>
                 <li>Home</li>
                 <li>Special Deals</li>
                 <li>New products</li>

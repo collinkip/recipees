@@ -7,7 +7,7 @@ import Product from './products';
 const App=()=>{
   const [recipes,setRecipes]=useState([]);
   const [search,setSearch]=useState("");
-  const [query,setQuery]=useState();
+  const [query,setQuery]=useState('');
   useEffect(()=>{
     fetchRecipe();
   },[query]);
@@ -23,6 +23,7 @@ const App=()=>{
     });
     const data = await response.json();
     setRecipes(data.hints)
+    console.log(data.hints)
     
   }  
   // events
@@ -38,11 +39,11 @@ const App=()=>{
   return(
     <div className='App'>
        <Navbar/>
-      <h2>Hello world</h2>
       <form className='form' onSubmit={getSearch}>
         <input className='input' type="text" value={search} onChange={updateSearch}/>
         <button className='button'>search</button>
       </form>
+      <div className='recipes'>
       {recipes.map(recipe=>(
         <Product
         key={recipe.food.foodId}
@@ -50,6 +51,7 @@ const App=()=>{
          image={recipe.food.image} 
          category={recipe.food.category}/>
       ))}
+      </div>
       <Footer/>
     </div>
   );
