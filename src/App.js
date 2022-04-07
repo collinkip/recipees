@@ -22,7 +22,6 @@ const App=()=>{
       alert(error)
     });
     const data = await response.json();
-    console.log(data.hints);
     setRecipes(data.hints)
     
   }  
@@ -30,7 +29,6 @@ const App=()=>{
 
   const updateSearch=e=>{
     setSearch(e.target.value);
-    console.log(search)
   }
 
   const getSearch=e=>{
@@ -47,7 +45,7 @@ const App=()=>{
       </form>
       {recipes.map(recipe=>(
         <Product
-        key={recipe.food.uri}
+        key={recipe.food.foodId}
          title={recipe.food.label} 
          image={recipe.food.image} 
          category={recipe.food.category}/>
